@@ -1,5 +1,7 @@
-import sum from "./skeleton";
+import twoOldestAges from "./skeleton";
 
-test("sum adds two numbers", () => {
-  expect(sum(4, 3)).toBe(7);
+test("basic tests", () => {
+  expect(twoOldestAges([3, 27, 4, 89, 21, 5])).toStrictEqual([27, 89]);
+  expect(twoOldestAges([3, 27, 21, 5])).toStrictEqual([21, 27]);
+  expect(twoOldestAges([3, 5])).toStrictEqual([3, 5]);
 });
